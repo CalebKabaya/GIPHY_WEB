@@ -6,17 +6,23 @@ import { AppComponent } from './app.component';
 import { GiphyComponent } from './giphy/giphy.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FlagComponent } from './flag/flag.component';
+import { GiphyDetailsComponent } from './giphy-details/giphy-details.component';
+import {HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     GiphyComponent,
     NavbarComponent,
-    FlagComponent
+    FlagComponent,
+    GiphyDetailsComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
