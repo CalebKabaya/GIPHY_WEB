@@ -1,8 +1,10 @@
 <nav class="navbar navbar-light ">
     <div class="container">
-        <form class="d-flex" (ngSubmit)="searchGif(gifForm)" #gifForm="ngForm">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" ngModel name="searchTerm" />
-            <button class="btn btn-outline-success" type="submit">Search</button>
+        <form class="d-flex" #gifForm="ngForm">
+            <input type="search" id="search"  #gif (keyup.enter)="search(gif.value)" class="form-control" placeholder="Search all the GIFs and Stickers"/>
+
+            <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" ngModel name="searchTerm" /> -->
+            <button class="btn btn-outline-danger" type="submit"(click)="search(gif.value)">Search</button>
         </form>
     </div>
 </nav>

@@ -9,29 +9,38 @@ import { MydataService } from '../mydata.service';
 })
 export class SearchComponent implements OnInit {
   gifs:any[]=[];
+  searchTerm!: string;
+
 
   constructor( private mydata:MydataService) { }
-
+  // search(searchTerm : string){
+    
+  //   if(searchTerm !== ''){
+  //     this.mydata.searchGifs(searchTerm);
+  //     console.log('searchTerm')
+  //   }
+  //   this.searchTerm == ''
+  // }
  
-  // searchItem:string
-//   search(searchTerm:string){
-//     if(searchTerm !== ''){
-//       this.mydata.searchGifs(searchTerm)
-//       .subscribe((response:any)=>{
-// console.log('Search Data',response);
+  // searchTerm:string
+  search(searchTerm:string){
+    if(searchTerm !== ''){
+      this.mydata.searchGifs(searchTerm)
+      .subscribe((response:any)=>{
+console.log('Search Data',response);
 
-//       });
-//     }
-//   }
-
-  searchGif(form: NgForm) {
-    let { searchTerm } = form.value;
-    this.mydata.searchGifs(searchTerm).subscribe((data) => {
-      console.log('Search Data',data)
-      this.gifs = data.data;
-    });
-    form.reset();
+      });
+    }
   }
+
+  // searchGif(form: NgForm) {
+  //   let { searchTerm } = form.value;
+  //   this.mydata.searchGifs(searchTerm).subscribe((data) => {
+  //     console.log('Search Data',data)
+  //     this.gifs = data.data;
+  //   });
+  //   form.reset();
+  // }
   ngOnInit(): void {
     // this.mydata.getGifs().subscribe((data) => {
     //   this.gifs = data.data;
