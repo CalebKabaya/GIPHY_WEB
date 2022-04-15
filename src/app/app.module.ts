@@ -8,6 +8,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FlagComponent } from './flag/flag.component';
 import { GiphyDetailsComponent } from './giphy-details/giphy-details.component';
 import {HttpClientModule } from '@angular/common/http';
+import { SearchComponent } from './search/search.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,12 +18,14 @@ import {HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     FlagComponent,
     GiphyDetailsComponent,
+    SearchComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
 
   ],
   providers: [],

@@ -1,7 +1,9 @@
 .nav-item a{
-    font-size: 27;
+    font-size: 20px;
     color: white;
-    margin: 0 35px;
+    margin: 0 30px;
+    border-bottom: 3px solid blue;
+
 }
 nav{
     justify-content: space-around;
@@ -10,12 +12,7 @@ nav{
 .navbar{
     width: 100%;
 }
-form input{
-    width: 100%;
-}
-form{
-    width: 100%;
-}
+
 .container-md{
     /* background-color: black; */
 }
@@ -23,4 +20,7 @@ form{
     background-color: #696bfa;
     color: wheat;
     margin: 0 20px;
+}
+.img-responsive{
+    width: 10%;
 }

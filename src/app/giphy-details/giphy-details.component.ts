@@ -10,11 +10,18 @@ import { MydataService } from '../mydata.service';
 export class GiphyDetailsComponent implements OnInit {
 gifs:any[]=[];
 // random:any[]=[]
+
+
+getGifs(count: number) {
+  this.mydata.getMoreGifs(count).subscribe((data) => {
+    this.gifs = data.data;
+  });
+}
   constructor(private mydata:MydataService) { }
 
   ngOnInit(): void { this.mydata.getGifs()
     .subscribe((response:any)=>{
-      console.log('Data',response);
+      // console.log('Data',response);
 this.gifs=response.data;
 // this.gifs=response.data;
       
